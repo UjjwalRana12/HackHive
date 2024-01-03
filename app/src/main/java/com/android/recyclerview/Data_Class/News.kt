@@ -10,3 +10,10 @@ data class Music(
     val image:List<Int>,
     val title:String
 )
+
+data class Songs(
+    val heading: String,
+    val project_image:List<Int>,
+    val Song:String,
+    val Artist:String
+)

@@ -12,15 +12,40 @@ import com.android.recyclerview.R
 import org.w3c.dom.Text
 
 class Fourth_Adapter(var Flist:List<Songs>):RecyclerView.Adapter<Fourth_Adapter.fourth_adapterView>() {
-    inner class fourth_adapterView(fourthView: View):RecyclerView.ViewHolder(fourthView){
-        val FrvText: TextView =itemView.findViewById(R.id.frv_text)
-        val FrvImage: ImageView = itemView.findViewById(R.id.frv_image)
+
+
+   private lateinit var Mlisterner:OnClickListener
+
+
+
+    interface OnClickListener {
+
+        fun OnItemClick(position: Int){
+
+        }
 
     }
 
+    fun SetonItemClickListener(listener:OnClickListener){
+        Mlisterner=listener
+    }
+
+    inner class fourth_adapterView(fourthView: View,listener: OnClickListener):RecyclerView.ViewHolder(fourthView){
+        val FrvText: TextView =itemView.findViewById(R.id.frv_text)
+        val FrvImage: ImageView = itemView.findViewById(R.id.frv_image)
+
+        init {
+            fourthView.setOnClickListener {
+                listener.OnItemClick(adapterPosition)
+            }
+        }
+
+    }
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): fourth_adapterView {
         val Fview= LayoutInflater.from(parent.context).inflate(R.layout.fourth_layout,parent,false)
-        return fourth_adapterView(Fview)
+        return fourth_adapterView(Fview,Mlisterner)
     }
 
     override fun getItemCount(): Int {

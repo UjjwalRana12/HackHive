@@ -16,10 +16,14 @@ class MainActivity3 : AppCompatActivity() {
         FourthRecyclerView=findViewById(R.id.FourthRecycler)
 
         val Flist= listOf(
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist"),
+            Songs("hello", listOf(R.drawable.photodo),"Song","artist1 jdhvjh"),
+            Songs("hello", listOf(R.drawable.photocheh),"Song","artist2 djbcjdbc"),
+            Songs("hello", listOf(R.drawable.photochaar),"Song","artist3"),
+            Songs("hello", listOf(R.drawable.photopaanch),"Song","artist4"),
+            Songs("hello", listOf(R.drawable.photosaath),"Song","artist4"),
+            Songs("hello", listOf(R.drawable.photoek),"Song","artist4"),
+            Songs("hello", listOf(R.drawable.photodo),"Song","artist4"),
+            Songs("hello", listOf(R.drawable.photodo),"Song","artist4"),
 
         )
        val fourthAdapter= Fourth_Adapter(Flist)

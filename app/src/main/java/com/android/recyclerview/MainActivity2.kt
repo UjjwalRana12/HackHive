@@ -3,6 +3,7 @@ package com.android.recyclerview
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.recyclerview.Adapters.ThirdAdapter
@@ -26,5 +27,15 @@ class MainActivity2 : AppCompatActivity() {
         val song_adapter =ThirdAdapter(SongList)
         songRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         songRecyclerView.adapter=song_adapter
+
+        song_adapter.setClick(object :ThirdAdapter.OnClickListener{
+
+            override fun OnItemClick(positon: Int) {
+                Toast.makeText(this@MainActivity2,"you clicked on position $positon",Toast.LENGTH_SHORT).show()
+            }
+        })
+
+
     }
+
 }

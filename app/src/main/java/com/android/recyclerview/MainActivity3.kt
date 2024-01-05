@@ -18,26 +18,9 @@ class MainActivity3 : AppCompatActivity() {
 
         val Flist= listOf(
             Songs("hello", listOf(R.drawable.photodo),"Song","artist1"),
-            Songs("hello", listOf(R.drawable.photocheh),"Song","artist2 "),
-            Songs("hello", listOf(R.drawable.photochaar),"Song","artist3"),
-            Songs("hello", listOf(R.drawable.photopaanch),"Song","artist4"),
-            Songs("hello", listOf(R.drawable.photosaath),"Song","artist4"),
-            Songs("hello", listOf(R.drawable.photoek),"Song","artist4"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist4"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist4"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist4"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist4"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist4"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist4"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist4"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist4"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist4"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist4"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist4"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist4"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist4"),
-            Songs("hello", listOf(R.drawable.photodo),"Song","artist4"),
-
+            Songs("hello", listOf(R.drawable.photodo),"Song","artist1"),
+            Songs("hello", listOf(R.drawable.photodo),"Song","artist1"),
+            Songs("hello", listOf(R.drawable.photodo),"Song","artist1"),
         )
        val fourthAdapter= Fourth_Adapter(Flist)
        FourthRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)

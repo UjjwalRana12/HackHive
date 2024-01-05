@@ -17,3 +17,9 @@ data class Songs(
     val Song:String,
     val Artist:String
 )
+
+data class DataBase(
+    val image:List<Int>,
+    val food:String,
+    val Restaurant:String,
+)

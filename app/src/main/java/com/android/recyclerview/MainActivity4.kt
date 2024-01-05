@@ -3,6 +3,7 @@ package com.android.recyclerview
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.recyclerview.Adapters.Fifth_Adapter
@@ -74,8 +75,26 @@ class MainActivity4 : AppCompatActivity() {
         Fv2Recycler.layoutManager=LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
         Fv2Recycler.adapter=adapter2
 
+        adapter.setClick(object :Fifth_Adapter.ClickKrnepe{
 
+            override fun onClick(position: Int) {
+                Toast.makeText(this@MainActivity4,"the position is $position",Toast.LENGTH_SHORT).show()
+            }
+        })
 
+    adapter1.setClick(object :Fifth_Adapter.ClickKrnepe{
+        override fun onClick(position: Int) {
+            Toast.makeText(this@MainActivity4,"the position is $position",Toast.LENGTH_SHORT).show()
+
+        }
+    })
+
+    adapter2.setClick(object :Fifth_Adapter.ClickKrnepe{
+        override fun onClick(position: Int) {
+            Toast.makeText(this@MainActivity4,"the position is $position",Toast.LENGTH_SHORT).show()
+
+        }
+    })
 
     }
 

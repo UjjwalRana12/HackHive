@@ -19,11 +19,9 @@ class Fourth_Adapter(var Flist:List<Songs>):RecyclerView.Adapter<Fourth_Adapter.
 
 
     interface OnClickListener {
-
         fun OnItemClick(position: Int){
 
         }
-
     }
 
     fun SetonItemClickListener(listener:OnClickListener){
